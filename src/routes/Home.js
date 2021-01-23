@@ -32,11 +32,11 @@ function Home({ toDos, addToDo }) {
   );
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return { toDos: state };
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     addToDo: (text) => dispatch(actionCreators.addToDo(text)),
   };
