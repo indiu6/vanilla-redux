@@ -61,8 +61,9 @@ export default store;
 // const addToDo = createAction('ADD');
 // const deleteToDo = createAction('DELETE');
 
-// //todo now it's OK to mutate the state by 'immer'
-// //* 2 options: mutate the state OR return new state, but not both
+//* now it's OK to mutate the state by 'immer'
+//* 2 options: mutate the state OR return new state, but not both
+
 // const reducer = createReducer([], {
 //   [addToDo]: (state, action) => {
 //     state.push({ text: action.payload, id: Date.now() }); // mutate the state
