@@ -16,7 +16,7 @@ const toDos = createSlice({
 //* configureStore activates Redux Dev Tool
 const store = configureStore({ reducer: toDos.reducer });
 
-//* createSlice also gives actions
+//* createSlice also gives actions which can be dispatched by others
 export const { add, remove } = toDos.actions;
 
 console.log(add);
