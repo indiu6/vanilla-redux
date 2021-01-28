@@ -1,7 +1,7 @@
 // import { createStore } from 'redux';
-import { configureStore, createSlice } from '@reduxjs/toolkit';
+import { configureStore, createSlice, combineReducers } from '@reduxjs/toolkit';
 
-const toDos = createSlice({
+const toDoSlice = createSlice({
   name: 'toDosReducer',
   initialState: [],
   reducers: {
@@ -13,11 +13,15 @@ const toDos = createSlice({
   },
 });
 
+const rootReducer = combineReducers({
+  toDos: toDoSlice.reducer,
+});
+
 //* configureStore activates Redux Dev Tool
-const store = configureStore({ reducer: toDos.reducer });
+const store = configureStore({ reducer: toDoSlice.reducer });
 
 //* createSlice also gives actions which can be dispatched by others
-export const { add, remove } = toDos.actions;
+export const { add, remove } = toDoSlice.actions;
 
 console.log(add);
 
