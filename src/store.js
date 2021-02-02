@@ -2,7 +2,7 @@
 import { configureStore, createSlice, combineReducers } from '@reduxjs/toolkit';
 
 const toDoSlice = createSlice({
-  name: 'toDosReducer',
+  name: 'toDos',
   initialState: [],
   reducers: {
     add: (state, action) => {
@@ -22,8 +22,9 @@ const store = configureStore({ reducer: toDoSlice.reducer });
 
 //* createSlice also gives actions which can be dispatched by others
 export const { add, remove } = toDoSlice.actions;
-
 console.log(add);
+
+export const selectTodos = (state) => state;
 
 export default store;
 
