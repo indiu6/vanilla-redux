@@ -14,11 +14,11 @@ function ToDo({ text, onBtnClick, id }) {
   );
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    onBtnClick: () => dispatch(remove(ownProps.id)),
-  };
-};
+// const mapDispatchToProps = (dispatch, ownProps) => {
+//   return {
+//     onBtnClick: () => dispatch(remove(ownProps.id)),
+//   };
+// };
 
 // export default connect(null, mapDispatchToProps)(ToDo);
 export default ToDo;
